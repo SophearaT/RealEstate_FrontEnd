@@ -1,7 +1,7 @@
 <template>
-  <HyperHeader/>
+  <HyperHeader v-if="$route.name != 'NotFound'"/>
   <RouterView/>
-  <HyperFooter/>
+  <HyperFooter v-if="$route.name != 'NotFound'"/>
 </template>
 <script>
 
