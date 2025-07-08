@@ -20,6 +20,12 @@
                 <div class="text-sm text-gray-600">
                     <span class="font-medium text-purple-700">Age:</span> {{ user.age }}
                 </div>
+                <div class="text-sm text-gray-600">
+                    <span class="font-medium text-purple-700">Major:</span> {{ user.major }}
+                </div>
+                <div class="text-sm text-gray-600">
+                    <span class="font-medium text-purple-700">Salary:</span> {{ user.salary }}
+                </div>
             </div>
         </div>
     </div>

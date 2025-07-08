@@ -1,29 +1,33 @@
 <template>
     <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md">
         <h2 class="text-2xl font-semibold mb-6 text-gray-800">User Information</h2>
-        <form @submit.prevent="handleSubmit" class="space-y-4">
+        <Form :validation-schema="validateSchema" @submit="handleSubmit" class="space-y-4">
             <!-- Name Field -->
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Name</label>
-                <input type="text" v-model="form.name"
+                <Field type="text" v-model="form.name" name="name"
                     class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your name" required />
+                    placeholder="Enter your name" />
+                <ErrorMessage name="name" class="text-red-600 text-sm mt-1"/>
             </div>
+
 
             <!-- Email Field -->
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Email</label>
-                <input type="email" v-model="form.email"
+                <Field type="email" v-model="form.email" name="email"
                     class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your email" required />
+                    placeholder="Enter your email"  />
+                <ErrorMessage name="email" class="text-red-600 text-sm mt-1"/>
             </div>
 
             <!-- Age Field -->
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Age</label>
-                <input type="number" v-model="form.age" min="0"
+                <Field type="number" v-model="form.age" min="0" name="age"
                     class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your age" required />
+                    placeholder="Enter your age"  />
+                <ErrorMessage name="age" class="text-red-600 text-sm mt-1"/>
             </div>
 
             <!-- Submit Button -->
@@ -31,21 +35,38 @@
                 class="w-full py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition duration-200">
                 Submit
             </button>
-        </form>
+        </Form>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
+import { Form, Field, ErrorMessage, validate} from 'vee-validate';
+import * as yup from 'yup';
 export default {
     name: 'UserForm',
+    components: {
+        Form,
+        Field,
+        ErrorMessage,
+    },
     data() {
         return {
             form: {
                 name: '',
                 email: '',
                 age: ''
-            }
+            },
+            validateSchema: yup.object({
+                name: yup.string().matches(/^[A-Za-z\s]+$/,
+                        'Only alphabet and space is accepted'
+                    )
+                        .min(3, 'Name must be at least 3 characters')
+                        .required('Name is required'),
+                    email: yup.string().email('Invalid email').required('Email is required'),
+                    age: yup.number().min(10, 'Minimum age of 10').max(120, 'Maximum age of 120').required('Age is required')
+
+            })            
         }
     },
     methods: {
