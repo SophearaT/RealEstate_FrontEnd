@@ -14,6 +14,8 @@ import Pricing from './components/Pricing.vue'
 import PricingList from './components/PricingList.vue'
 import Project from './pages/Project.vue'
 import ProjectPage from './pages/ProjectPage.vue'
+import Registration from './pages/Registration.vue'
+import User from './pages/User.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -26,6 +28,8 @@ const routes = [
   },
   { path: '/project', component: Project},
   { path: '/project/:name', component: ProjectPage},
+  { path: '/register', component: Registration},
+  { path: '/user', component: User},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
