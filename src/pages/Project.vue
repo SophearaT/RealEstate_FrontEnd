@@ -2,7 +2,7 @@
   <section>
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <header class="text-center">
-        <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+        <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection {{ projects.length }}</h2>
   
         <p class="mx-auto mt-4 max-w-md text-gray-500">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
@@ -12,7 +12,7 @@
   
       <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <li v-for="(project,index) in projects" :key="index">
-        <a href="#" class="block rounded-md border border-gray-300 p-4 shadow-sm sm:p-6">
+        <router-link :to="`/project/${project.name}`" class="block rounded-md border border-gray-300 p-4 shadow-sm sm:p-6 hover:scale-95 hover:shadow-lg hover:shadow-blue-500">
             <div class="sm:flex sm:justify-between sm:gap-4 lg:gap-6">
                 <div class="sm:order-last sm:shrink-0">
                 <img
@@ -82,7 +82,7 @@
                 <dd class="text-xs text-gray-700">12 minutes</dd>
                 </div>
             </dl>
-        </a>
+        </router-link>
         </li>
   
         
@@ -94,8 +94,16 @@
 import axios from 'axios';
 export default{
         async mounted(){
+            
+            try {
             const response = await axios.get("https://api.github.com/users/SophearaT/repos");
             this.projects = response.data;
+
+            }catch(error){
+                console.error('Error fetching projects',error);
+                return;
+            }
+            
         },
         data() {
             return{

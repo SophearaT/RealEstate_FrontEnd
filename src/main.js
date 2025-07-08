@@ -13,6 +13,7 @@ import Collection from './components/Collection.vue'
 import Pricing from './components/Pricing.vue'
 import PricingList from './components/PricingList.vue'
 import Project from './pages/Project.vue'
+import ProjectPage from './pages/ProjectPage.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -24,6 +25,7 @@ const routes = [
   ]
   },
   { path: '/project', component: Project},
+  { path: '/project/:name', component: ProjectPage},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
