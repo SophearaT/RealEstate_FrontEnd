@@ -16,6 +16,7 @@ import Project from './pages/Project.vue'
 import ProjectPage from './pages/ProjectPage.vue'
 import Registration from './pages/Registration.vue'
 import User from './pages/User.vue'
+import ContactForm from './pages/ContactForm.vue'
 import { createI18n } from 'vue-i18n'
 
 const routes = [
@@ -31,6 +32,7 @@ const routes = [
   { path: '/project/:name', component: ProjectPage},
   { path: '/register', component: Registration},
   { path: '/user', component: User},
+  { path: '/contact', component: ContactForm},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
@@ -51,16 +53,19 @@ const i18n = createI18n({
             user: 'User',
             services: 'Services',
             projects: 'Projects',
-            setting: 'Setting'
+            setting: 'Setting',
+            Contact: 'Contact'
         },
         khm: {
+            khmer: 'ខ្មែរ',
             hello: 'សួស្តី​ពិភពលោក',
             about: 'អំពីយើង',
             register: 'ចុះឈ្មោះ',
             user: 'អ្នកប្រើប្រាស់',
             services: 'សេវាកម្ម',
             projects: 'គម្រោង',
-            setting: 'ការកំណត់'
+            setting: 'ការកំណត់',
+            Contact: 'ទំនាក់ទំនង'
         }
     }
 }

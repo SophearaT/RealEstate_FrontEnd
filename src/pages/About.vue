@@ -1,11 +1,12 @@
 <template>
-    <Pricing />
+    <HeroSection />
 </template>
 <script>
-import Pricing from '@/components/Pricing.vue'
+import HeroSection from '@/components/HeroSection.vue';
+
 export default {
     components: {
-        Pricing
+        HeroSection
     }
 }
 </script>
