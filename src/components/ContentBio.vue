@@ -22,7 +22,7 @@
            2009-2011 High School at KPS
           </p>
           <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-           2011-2016 Bachelor of Computer Engeering at RUPP
+           2011-2016 Bachelor of Computer Engineering at RUPP
           </p>
         </div>
         <div class="relative mt-8 flex items-center gap-x-4">
