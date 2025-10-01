@@ -57,7 +57,6 @@ const i18n = createI18n({
             Contact: 'Contact'
         },
         khm: {
-            khmer: 'ខ្មែរ',
             hello: 'សួស្តី​ពិភពលោក',
             about: 'អំពីយើង',
             register: 'ចុះឈ្មោះ',

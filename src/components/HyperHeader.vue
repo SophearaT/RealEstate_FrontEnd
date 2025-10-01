@@ -1,7 +1,8 @@
 <template>
     <!-- <header class="bg-white"> -->
-    <header class="bg-stone-300">
-        <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+    <header>
+        <div
+            class="bg-[url(src/assets/bg.png)] mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
             <router-link class="block text-teal-600" to="/">
                 <span class="sr-only">Home</span>
                 <!-- <svg class="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,16 +13,14 @@
                 <!-- <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
                     <circle r="45" cx="50" cy="50" fill="red" />
                 </svg> -->
-                <svg height="40" width="100" xmlns="http://www.w3.org/2000/svg">
-                <text x="5" y="30" fill="black" stroke="black" font-size="35">TSPR</text>
-                </svg>
+                <img class="rounded-full" src="@/assets/logo.png" width="64" height="64" alt="">
             </router-link>
 
             <div class="flex flex-1 items-center justify-end md:justify-between">
                 <nav aria-label="Global" class="hidden md:block">
                     <ul class="flex items-center gap-6 text-sm">
                         <li>
-                            <router-link class="text-white-500 transition hover:underline" to="/about">  
+                            <router-link class="text-white-500 transition hover:underline" to="/about">
                                 {{ $t('about') }}
                             </router-link>
                         </li>
@@ -45,7 +44,7 @@
                         </li> -->
 
                         <li>
-                            <router-link class="text-white-500 transition hover:underline" to="/project">  
+                            <router-link class="text-white-500 transition hover:underline" to="/project">
                                 {{ $t('projects') }}
                             </router-link>
                         </li>
@@ -56,8 +55,8 @@
                             </router-link>
                         </li> -->
                         <li>
-                            <router-link class="text-white-500 transition  hover:underline" to="/contact"> 
-                                {{ $t('Contact') }}    
+                            <router-link class="text-white-500 transition  hover:underline" to="/contact">
+                                {{ $t('Contact') }}
                             </router-link>
                         </li>
                     </ul>
@@ -65,12 +64,12 @@
 
                 <div class="flex items-center gap-4">
                     <div class="sm:flex sm:gap-4">
-                         <div v-if="$i18n.locale === 'en'" @click="changeLanguage('khm')"
-                        class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
-                        Khmer</div>
+                        <div v-if="$i18n.locale === 'en'" @click="changeLanguage('khm')"
+                            class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
+                            ភាសាខ្មែរ</div>
                         <div v-else @click="changeLanguage('en')"
-                        class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
-                        {{ $t('khmer') }}    </div>
+                            class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
+                            English</div>
                         <!-- <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
                             href="#">
                             Login
@@ -93,15 +92,10 @@
                 </div>
             </div>
         </div>
-        
     </header>
-    
 </template>
 <script>
-
-
 export default {
-    
     methods: {
         changeLanguage(lang) {
             this.$i18n.locale = lang;
