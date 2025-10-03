@@ -15,11 +15,10 @@
 
             <!-- Navigation Links -->
             <div class="hidden lg:flex items-center gap-8">
-                <a href="#"
-                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Home</a>
-                <a href="#"
-                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">About
-                    Us</a>
+                <router-link to="/"
+                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Home</router-link>
+                <router-link to="/about" exact
+                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">About Us</router-link>
                 <a href="#"
                     class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Properties</a>
                 <a href="#"
