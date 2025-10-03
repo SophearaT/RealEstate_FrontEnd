@@ -1,5 +1,4 @@
 <template>
-    <!-- <header class="bg-white"> -->
     <header class="bg-stone-300">
         <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
             <router-link class="block text-teal-600" to="/">
