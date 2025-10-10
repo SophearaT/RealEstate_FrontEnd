@@ -1,41 +1,40 @@
 <template>
-    <section class="mx-4">
-        <div
-            class="w-full max-w-80 mx-auto my-6 p-6 border border-cyan-200 rounded-2xl bg-cyan-300 shadow-2xl shadow-cyan-500/100">
-            <h2 class="text-2xl font-semibold mb-4 text-center">Contact Form</h2>
-            <Form :validation-schema="validateSchema" @submit="handleSubmit">
-                <!-- Name Field -->
-                <div>
-                    <label for="name" class="block mb-1 font-semibold">Name</label>
-                    <Field type="text" v-model="form.name" name="name"
-                        class="w-full px-4 py-2 border border-black-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="Enter your name" />
-                    <ErrorMessage name="name" class="text-red-600 text-sm mt-1" />
-                </div>
-                <!-- Email Field -->
-                <div>
-                    <label for="email" class="block mb-1 font-semibold">Email</label>
-                    <Field type="email" v-model="form.email" name="email"
-                        class="w-full px-4 py-2 border border-black-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="Enter your email" />
-                    <ErrorMessage name="email" class="text-red-600 text-sm mt-1" />
-                </div>
-                <!-- Message Field -->
-                <div>
-                    <label for="message" class="block mb-1 font-semibold">Message</label>
-                    <Field as="textarea" v-model="form.message" name="message" rows="3"
-                        class="w-full px-4 py-2 border border-black-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="Enter your message" />
-                    <ErrorMessage name="message" class="text-red-600 text-sm mt-1" />
-                </div>
-                <!-- Submit Button -->
+    <div class="max-w-sm mx-auto my-8 p-6 bg-white rounded-2xl shadow-md border border-cyan-500">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Contact Form</h2>
+        <Form :validation-schema="validateSchema" @submit="handleSubmit">
+            <!-- Name Field -->
+            <div>
+                <label for="name" class="block mb-1 font-semibold">Name</label>
+                <Field type="text" v-model="form.name" name="name"
+                    class="w-full px-4 py-2 border border-black-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Enter your name" />
+                <ErrorMessage name="name" class="text-red-600 text-sm mt-1" />
+            </div>
+            <!-- Email Field -->
+            <div>
+                <label for="email" class="block mb-1 font-semibold">Email</label>
+                <Field type="email" v-model="form.email" name="email"
+                    class="w-full px-4 py-2 border border-black-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Enter your email" />
+                <ErrorMessage name="email" class="text-red-600 text-sm mt-1" />
+            </div>
+            <!-- Message Field -->
+            <div>
+                <label for="message" class="block mb-1 font-semibold">Message</label>
+                <Field as="textarea" v-model="form.message" name="message" rows="3"
+                    class="w-full px-4 py-2 border border-black-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Enter your message" />
+                <ErrorMessage name="message" class="text-red-600 text-sm mt-1" />
+            </div>
+            <!-- Submit Button -->
+            <div>
                 <button type="submit"
-                    class="w-full py-2 bg-black text-white rounded-2xl hover:bg-white hover:text-black hover:cursor-pointer transition-colors duration-300">
+                    class="container mx-auto py-2 bg-black text-white rounded-2xl hover:bg-red-500 hover:text-white font-semibold hover:cursor-pointer transition-colors duration-300">
                     Send Message
                 </button>
-            </Form>
-        </div>
-    </section>
+            </div>
+        </Form>
+    </div>
 </template>
 <script>
 import axios from 'axios';
