@@ -19,9 +19,9 @@
                 Want to find a home? We are ready to help you find one that suits your lifestyle and needs
               </p>
 
-              <button class="inline-flex items-center px-12 py-4 bg-black text-white rounded-[11px] text-base font-medium tracking-[-0.32px] hover:bg-gray-800 transition-colors">
-                Get Started
-              </button>
+              <router-link to="/contact" class="inline-flex items-center px-12 py-4 bg-black text-white rounded-[11px] text-base font-medium tracking-[-0.32px] hover:bg-gray-800 transition-colors">
+                Contact Us
+              </router-link>
 
               <!-- Statistics -->
               <div class="flex flex-wrap gap-8 pt-8">
