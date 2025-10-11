@@ -1,6 +1,6 @@
 <template>
     <HeroSection />
-    <content-bio />
+    <ContentBio />
 </template>
 <script>
 import HeroSection from '@/components/HeroSection.vue';

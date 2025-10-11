@@ -1,1 +1,25 @@
-@import "tailwindcss";
+@font-face {
+  font-family: 'Kantumruy Pro';
+  src: url('./fonts/KantumruyPro-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+ @font-face {
+  font-family: 'Moul';
+  src: url('./fonts/Moul-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss"; 
+/* Plugins */
+@config "../../tailwind.config.js";
