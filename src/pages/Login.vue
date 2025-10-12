@@ -1,18 +1,9 @@
 <template>
     <div class="bg-gray-300 bg-cover bg-center min-h-screen flex items-center justify-center">
     <div class="m-16 w-full shadow-2xl  max-w-md mx-auto  p-6 rounded-4xl bg-blue-50">
-        <h2 class="  text-2xl font-semibold mb-6 text-gray-800 text-center">User Information</h2>
+        <h2 class="  text-2xl font-semibold mb-6 text-gray-800 text-center">User Login</h2>
         <Form :validation-schema="validateSchema" @submit="handleSubmit" class="space-y-4">
-            <!-- User Type Selection -->
-            <div>
-                <label class="block mb-1 text-sm font-medium text-gray-700">Type</label>
-                <Field as="select" v-model="form.userType" name="userType" placeholder="Select User Type" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="" disabled>Select User Type</option>
-                    <option  value="user">User</option>
-                    <option  value="company">Company</option>
-                </Field>
-                <ErrorMessage name="userType" class="text-red-600 text-sm mt-1"/>
-            </div>
+           
 
 
             <!-- Name Field -->
@@ -26,22 +17,7 @@
 
 
             <!-- Email Field -->
-            <div>
-                <label class="block mb-1 text-sm font-medium text-gray-700">Email</label>
-                <Field type="email" v-model="form.email" name="email"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your email"  />
-                <ErrorMessage name="email" class="text-red-600 text-sm mt-1"/>
-            </div>
-
-            <!-- Age Field -->
-            <div>
-                <label class="block mb-1 text-sm font-medium text-gray-700">Age/Established year</label>
-                <Field type="number" v-model="form.age" min="0" name="age"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your age"  />
-                <ErrorMessage name="age" class="text-red-600 text-sm mt-1"/>
-            </div>
+           
             <!-- Password Field -->   
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Password</label>
@@ -49,23 +25,19 @@
                     class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your password"  />
                 <ErrorMessage name="password" class="text-red-600 text-sm mt-1"/>
-            </div>    
-            <div>
-                <label class="block mb-1 text-sm font-medium text-gray-700">Confirm Password</label>
-                <Field type="password" v-model="form.confirmPassword" name="confirmPassword"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Confirm your password"  />
-                <ErrorMessage name="confirmPassword" class="text-red-600 text-sm mt-1"/>
             </div>
-            <p class=" text-center text-sm text-gray-500 ">Already have an account? <router-link to="/login" class=" font-semibold text-blue-600 underline underline-offset-4">Login</router-link> here.</p>
+
+            <p class=" text-center text-sm text-gray-500 ">Don't have an account? <router-link to="/register" class=" font-semibold text-blue-600 underline underline-offset-4">Register</router-link> here.</p>
 
             <!-- Submit Button -->
+             <RouterLink to="/generaluserpage">
              <div class="flex justify-center">
                 <button type="submit"
                     class="w-30  py-2 bg-green-600 text-white font-semibold rounded-xl hover:bg-blue-600 transition duration-200">
-                    Register
+                    Login
                 </button>
             </div>
+            </RouterLink>
         </Form>
     </div>
 </div>

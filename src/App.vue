@@ -1,7 +1,17 @@
 <template>
-  <HyperHeader v-if="$route.name != 'NotFound'"/>
-  <RouterView/>
-  <HyperFooter v-if="$route.name != 'NotFound'"/>
+  <HyperHeader v-if="$route.name != 'NotFound'
+    && $route.name != 'userdashboard'
+    && $route.name != 'dusercomponent'
+    && $route.name != 'userprofile'
+    && $route.name != 'properties'"/>
+
+    <RouterView />
+    <HyperFooter v-if="$route.name != 'NotFound'
+      && $route.name != 'userdashboard'
+      && $route.name != 'dusercomponent'
+      && $route.name != 'userprofile'
+      && $route.name != 'properties'"/>
+
 </template>
 <script>
 

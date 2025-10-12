@@ -15,10 +15,17 @@ import PricingList from './components/PricingList.vue'
 import Project from './pages/Project.vue'
 import ProjectPage from './pages/ProjectPage.vue'
 import Registration from './pages/Registration.vue'
+import Login from './pages/Login.vue'
 import User from './pages/User.vue'
 import ContactForm from './pages/ContactForm.vue'
 import { createI18n } from 'vue-i18n'
 import Home from './pages/Home.vue'
+import UserDashboard from './Dashboard/UserDashboard.vue'
+import DUserComponent from './components/DashboardComponent/DUserComponent.vue'
+import UserProfile from './components/DashboardComponent/UserProfile.vue'
+import Properties from './components/DashboardComponent/Properties.vue'
+
+
 
 const routes = [
   { path: '/', component: Home },
@@ -32,8 +39,16 @@ const routes = [
   { path: '/project', component: Project},
   { path: '/project/:name', component: ProjectPage},
   { path: '/register', component: Registration},
+  { path: '/login', component: Login},
   { path: '/user', component: User},
   { path: '/contact', component: ContactForm},
+  { path: '/userdashboard', name: 'userdashboard', component: UserDashboard, children:[
+    { path: '', name: 'dusercomponent', component: DUserComponent },
+    { path: 'userprofile', name: 'userprofile', component: UserProfile },
+    { path: 'properties', name: 'properties', component: Properties }
+  ]},
+
+  
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
