@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-sm mx-auto my-8 p-6 bg-white rounded-2xl shadow-md border border-cyan-500">
+    <div class="max-w-sm mx-8 place-self-center my-8 p-6 bg-white rounded-2xl shadow-md border border-cyan-500">
         <h2 class="text-2xl font-semibold mb-4 text-center">Contact Form</h2>
         <Form :validation-schema="validateSchema" @submit="handleSubmit">
             <!-- Name Field -->

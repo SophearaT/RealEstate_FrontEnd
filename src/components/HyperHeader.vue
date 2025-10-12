@@ -1,6 +1,6 @@
 <template>
-    <header class=" bg-black relative z-10 px-6 lg:px-8 py-2">
-        <nav class="flex items-center justify-between max-w-[1388px] mx-auto">
+    <header class=" bg-black relative z-10 px-6 lg:px-8 py-2 mx-8">
+        <nav class="flex items-center justify-between w-full mx-auto">
             <!-- Logo -->
             <router-link class="flex items-center gap-2" to="/">
                 <div class="w-[47px] h-[47px] flex items-center justify-center text-white">
@@ -39,9 +39,6 @@
             </div>
         </nav>
     </header>
-
-
-
 </template>
 <!-- <script>
 

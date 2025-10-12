@@ -20,6 +20,7 @@ import User from './pages/User.vue'
 import ContactForm from './pages/ContactForm.vue'
 import { createI18n } from 'vue-i18n'
 import Home from './pages/Home.vue'
+import Privacy from './pages/Privacy.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -35,6 +36,7 @@ const routes = [
   { path: '/register', component: Registration},
   { path: '/user', component: User},
   { path: '/contact', component: ContactForm},
+  { path: '/privacy', component: Privacy},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
