@@ -90,7 +90,7 @@
                 Chroy Changva, Phnom Penh,
                 Cambodia.</li>
             <li>rsms@gmail.com</li>
-            <li>011 629 462</li>
+            <li>011&nbsp;123&nbsp;456</li>
         </ol>
     </div>
 </template>
