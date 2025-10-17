@@ -297,8 +297,8 @@
 
           <!--Card for location-->
           <!--card1-->
-          <div class="flex justify-center gap-10 flex-wrap">
-            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center p-6">
+          <div class="flex justify-center gap-6 flex-wrap">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center ">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -306,13 +306,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy 2021
                   </h5>
                 </a>
               </div>
             </div>
             <!--card2-->
-            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -326,7 +326,7 @@
               </div>
             </div>
             <!--card3-->
-            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -334,13 +334,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology
                   </h5>
                 </a>
               </div>
             </div>
             <!--card4-->
-            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -348,13 +348,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology
                   </h5>
                 </a>
               </div>
             </div>
             <!--card5-->
-            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -362,13 +362,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology 
                   </h5>
                 </a>
               </div>
             </div>
             <!--card6-->
-            <div class="mt-1 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -376,13 +376,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology
                   </h5>
                 </a>
               </div>
             </div>
             <!--card7-->
-            <div class="mt-1 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-16 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -390,13 +390,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology 
                   </h5>
                 </a>
               </div>
             </div>
             <!--card8-->
-            <div class="mt-1 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-1 max-w-sm bg-white rounded-lg  text-center ">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -404,13 +404,13 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology 
                   </h5>
                 </a>
               </div>
             </div>
             <!--card9-->
-            <div class="mt-1 max-w-sm bg-white rounded-lg  text-center p-6">
+            <div class="mt-1 max-w-sm bg-white rounded-lg  text-center">
               <a href="#">
                 <img class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-200 shadow-md"
                   src="/src/assets/Photos/House.png" alt="Profile" />
@@ -418,7 +418,7 @@
               <div class="mt-4">
                 <a href="#">
                   <h5 class="mb-2 font-bold tracking-tight text-black ">
-                    Noteworthy technology <br>acquisitions 2021</br>
+                    Noteworthy technology
                   </h5>
                 </a>
               </div>

@@ -20,11 +20,11 @@
                 <a href="#"
                     class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">About
                     Us</a>
-                <a href="#"
-                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Properties</a>
-                <a href="#"
-                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Agents</a>
-                     <router-link to="/userdashboard"
+                <router-link to="/propertieslist"
+                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Properties</router-link>
+                <router-link to="/agents"
+                    class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Agents</router-link>
+                <router-link to="/userdashboard"
                     class="text-2xl font-bold text-gray-300 tracking-[-0.48px] hover:text-blue-400 transition-colors">Dashboard</router-link>
             </div>
 

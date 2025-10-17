@@ -24,7 +24,7 @@ import UserDashboard from './Dashboard/UserDashboard.vue'
 import DUserComponent from './components/DashboardComponent/DUserComponent.vue'
 import UserProfile from './components/DashboardComponent/UserProfile.vue'
 import Properties from './components/DashboardComponent/Properties.vue'
-
+import PropertiesList from './pages/Propertieslist.vue'
 
 
 const routes = [
@@ -47,6 +47,7 @@ const routes = [
     { path: 'userprofile', name: 'userprofile', component: UserProfile },
     { path: 'properties', name: 'properties', component: Properties }
   ]},
+  {path: '/propertieslist', component: PropertiesList},
 
   
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
