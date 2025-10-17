@@ -10,8 +10,14 @@
                     placeholder="Enter your name" />
                 <ErrorMessage name="name" class="text-red-600 text-sm mt-1"/>
             </div>
-
-
+            <!-- Username Field -->
+            <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">User Name</label>
+                <Field type="number" v-model="form.username" name="username"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your user name"  />
+                <ErrorMessage name="username" class="text-red-600 text-sm mt-1"/>
+            </div>
             <!-- Email Field -->
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Email</label>
@@ -20,7 +26,6 @@
                     placeholder="Enter your email"  />
                 <ErrorMessage name="email" class="text-red-600 text-sm mt-1"/>
             </div>
-
             <!-- Age Field -->
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Age</label>
@@ -28,6 +33,28 @@
                     class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your age"  />
                 <ErrorMessage name="age" class="text-red-600 text-sm mt-1"/>
+            </div>
+            <!-- Password Field -->
+            <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Password</label>
+                <Field type="text" v-model="form.password" name="password"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your password" />
+                <ErrorMessage name="password" class="text-red-600 text-sm mt-1"/>
+            </div>
+            <!-- role Field -->
+            <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Role</label>
+                <!-- <Field type="text" v-model="form.password" name="password"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Enter your password" /> -->
+                <select name="Headline" id="Headline" class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" >
+                    <!-- class="mt-0.5 w-full rounded border-gray-300 shadow-sm sm:text-sm" -->
+                    <option value="">Please select</option>
+                    <option value="JM">User</option>
+                    <option value="JM">Company</option>
+                </select>
+                <ErrorMessage name="password" class="text-red-600 text-sm mt-1"/>
             </div>
 
             <!-- Submit Button -->
@@ -39,7 +66,7 @@
     </div>
 </template>
 
-<script>
+<!-- <script>
 import axios from 'axios';
 import { Form, Field, ErrorMessage, validate} from 'vee-validate';
 import * as yup from 'yup';
@@ -76,6 +103,65 @@ export default {
             try{
                 //use post to summit data to api
                 const respone = await axios.post('https://68648e915b5d8d03397d8138.mockapi.io/api/v1/users', {
+                    //assign data to variables
+                    name: this.form.name,
+                    email: this.form.email,
+                    age: this.form.age
+                })
+                console.log("Form Submited Successfully",respone.data);
+                //clear form
+                this.form ={
+                    name: '',
+                    email: '',
+                    age: ''
+                }
+                //link to the page directly
+                this.$router.push('/user');
+
+            }catch(error){
+                console.error('Error',error);
+            }
+        }
+    }
+}
+</script> -->
+<script>
+import axios from 'axios';
+import { Form, Field, ErrorMessage} from 'vee-validate';
+import * as yup from 'yup';
+export default {
+    name: 'UserForm',
+    components: {
+        Form,
+        Field,
+        ErrorMessage,
+    },
+    data() {
+        return {
+            form: {
+                name: '',
+                email: '',
+                age: ''
+            },
+            validateSchema: yup.object({
+                name: yup.string().matches(/^[A-Za-z\s]+$/,
+                        'Only alphabet and space is accepted'
+                    )
+                        .min(3, 'Name must be at least 3 characters')
+                        .required('Name is required'),
+                    email: yup.string().email('Invalid email').required('Email is required'),
+                    age: yup.number().min(10, 'Minimum age of 10').max(120, 'Maximum age of 120').required('Age is required')
+
+            })
+        }
+    },
+    methods: {
+        async handleSubmit() {
+            console.log('Form submitted:', this.form)
+            // You can add validation or API calls here
+            try{
+                //use post to summit data to api
+                const respone = await axios.post('http://localhost:3000/users', {
                     //assign data to variables
                     name: this.form.name,
                     email: this.form.email,

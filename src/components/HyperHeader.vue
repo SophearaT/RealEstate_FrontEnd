@@ -2,6 +2,7 @@
     <!-- <header class="bg-white"> -->
     <header class="bg-stone-300">
         <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+            <!-- Logo -->
             <router-link class="block text-teal-600" to="/">
                 <span class="sr-only">Home</span>
                 <!-- <svg class="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,8 +16,9 @@
                 <svg height="40" width="100" xmlns="http://www.w3.org/2000/svg">
                 <text x="5" y="30" fill="black" stroke="black" font-size="35">TSPR</text>
                 </svg>
+                
             </router-link>
-
+            
             <div class="flex flex-1 items-center justify-end md:justify-between">
                 <nav aria-label="Global" class="hidden md:block">
                     <ul class="flex items-center gap-6 text-sm">
@@ -60,37 +62,118 @@
                                 {{ $t('Contact') }}    
                             </router-link>
                         </li>
+                        <li>
+                            <router-link class="text-white-500 transition  hover:underline" to="/branding"> 
+                                {{ $t('branding') }}    
+                            </router-link>
+                        </li>
                     </ul>
                 </nav>
 
                 <div class="flex items-center gap-4">
                     <div class="sm:flex sm:gap-4">
-                         <div v-if="$i18n.locale === 'en'" @click="changeLanguage('khm')"
-                        class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
-                        Khmer</div>
+                        <div v-if="$i18n.locale === 'en'" @click="changeLanguage('khm')"
+                            class="hidden hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400 md:block">
+                            Khmer</div>
                         <div v-else @click="changeLanguage('en')"
-                        class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
-                        {{ $t('khmer') }}    </div>
-                        <!-- <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
-                            href="#">
+                            class="hover:cursor-pointer bg-slate-500 rounded-3xl px-3 py-2 text-white hover:bg-slate-400">
+                            {{ $t('khmer') }}    
+                        </div>
+                        <router-link @click="toggleMenu" class="hidden rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 md:block"
+                            to="/login">
                             Login
-                        </a>
+                        </router-link>
 
-                        <a class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-                            href="#">
+                        <!-- dropdown menu login -->
+                        <!-- <div v-if="menuOpen" class="absolute end-50 z-10 mt-14 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"
+                        role="menu">
+                        <div class="p-2">
+                            <a
+                            href="#"
+                            class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                            role="menuitem"
+                            >
+                            My profile
+                            </a>
+            
+                            <a
+                            href="#"
+                            class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                            role="menuitem"
+                            >
+                            Billing summary
+                            </a>
+            
+                            <a
+                            href="#"
+                            class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                            role="menuitem"
+                            >
+                            Team settings
+                            </a>
+                        </div>
+            
+                        <div class="p-2">
+                            <form method="POST" action="#">
+                            <button
+                                type="submit"
+                                class="flex w-full items-center gap-2 rounded-lg px-4 py-2 text-sm text-red-700 hover:bg-red-50"
+                                role="menuitem"
+                            >
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-4"
+                                >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+                                />
+                                </svg>
+            
+                                Logout
+                            </button>
+                            </form>
+                        </div>
+                        </div> -->
+
+                        <router-link class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 md:block"
+                            to="/signup">
                             Register
-                        </a> -->
+                        </router-link>
                     </div>
 
-                    <button
+
+
+                    <button @click="menuOpen = !menuOpen"
                         class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
                         <span class="sr-only">Toggle menu</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>       
+                             -->
+                        
                     </button>
+                    <!-- Mobile Menu -->
+                    <div v-if="menuOpen" class="md:hidden bg-gray-100 px-4 pb-4 space-y-2">
+                        <a href="#" class="block text-gray-700">Home</a>
+                        <a href="#" class="block text-gray-700">Buy</a>
+                        <a href="#" class="block text-gray-700">Rent</a>
+                        <a href="#" class="block text-gray-700">Contact</a>
+                    </div>
+                    
                 </div>
+                
             </div>
         </div>
         
@@ -100,12 +183,31 @@
 <script>
 
 
+
+
 export default {
-    
+    name: "ProfileDropdown",
+    data() {
+        return {
+      menuOpen: false,
+        };
+    },
     methods: {
         changeLanguage(lang) {
             this.$i18n.locale = lang;
-        }
+        },
+        toggleMenu() {
+            this.menuOpen = !this.menuOpen;
+    }
     }
 }
+
 </script>
+
+
+<style scoped>
+/* Optional: smooth transition when showing/hiding menu */
+div[role="menu"] {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+</style>

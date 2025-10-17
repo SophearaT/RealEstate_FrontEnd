@@ -14,14 +14,28 @@ import Pricing from './components/Pricing.vue'
 import PricingList from './components/PricingList.vue'
 import Project from './pages/Project.vue'
 import ProjectPage from './pages/ProjectPage.vue'
-import Registration from './pages/Registration.vue'
+//import Registration from './pages/Registration.vue'
 import User from './pages/User.vue'
 import ContactForm from './pages/ContactForm.vue'
 import { createI18n } from 'vue-i18n'
+import Branding_Page from './pages/Branding_Page.vue'
+
+import MainDashboard from './pages/MainDashboard.vue'
+import UserDashboardContent from './components/UserDashboardContent.vue'
+import PropertyDashboardContent from './components/PropertyDashboardContent.vue'
+//import UserForm from './components/UserForm.vue'
+import Registration from './pages/Registration.vue'
+import HeaderSide from './components/HeaderSide.vue'
+import LoginForm from './pages/LoginForm.vue'
+import SignUp from './pages/SignUp.vue'
+import UserCRUD from './pages/UserCRUD.vue'
+
 
 const routes = [
   { path: '/', component: Home },
   { path: '/about', component: About },
+  { path: '/branding', component: Branding_Page },
+  { path: '/header', component: HeaderSide },
   
   { path: '/setting',component: Setting, children:[
     { path: '', component: Collection},
@@ -30,10 +44,20 @@ const routes = [
   },
   { path: '/project', component: Project},
   { path: '/project/:name', component: ProjectPage},
+  { path: '/login', component: LoginForm},
+  { path: '/signup', component: SignUp},
   { path: '/register', component: Registration},
   { path: '/user', component: User},
   { path: '/contact', component: ContactForm},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  { path: '/dashboard', component: MainDashboard, meta: { requiresAuth: true }, children:[
+          { path: '', name:'dashboard' ,component: UserDashboardContent},
+          { path: 'property',name:'property', component: PropertyDashboardContent},
+    
+  ] },
+  { path: '/edit', name:'edit', component: UserCRUD },
+ 
+
 ]
 
 const router = createRouter({
@@ -42,6 +66,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+// Navigation guard
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem('token')
+  if (to.meta.requiresAuth && !token) next('/login')
+  else next()
+})
+
 const i18n = createI18n({
     locale: 'en',
     fallbackLocale: 'khm',
