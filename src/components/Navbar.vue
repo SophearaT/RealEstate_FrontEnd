@@ -25,7 +25,7 @@ export default {
 }
 </script> -->
 <template>
-  <header class="bg-white shadow flex items-center justify-between px-6 py-4">
+  <header class="bg-white shadow flex items-center justify-between px-6 py-4 hidden md:flex">
     <!-- Left side -->
     <!-- <div class="text-lg font-semibold">Dashboard</div> -->
 

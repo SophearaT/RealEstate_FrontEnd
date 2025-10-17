@@ -18,7 +18,7 @@ export default {
   },
    computed: {
     shouldShowComponent() {
-      const excludedRoutes = ['dashboard', 'NotFound','property','edit'];
+      const excludedRoutes = ['dashboard', 'NotFound','property','edit','user'];
       return !excludedRoutes.includes(this.$route.name);
     }
   }
