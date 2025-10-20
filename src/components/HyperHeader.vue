@@ -13,9 +13,7 @@
                 <!-- <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
                     <circle r="45" cx="50" cy="50" fill="red" />
                 </svg> -->
-                <svg height="40" width="100" xmlns="http://www.w3.org/2000/svg">
-                <text x="5" y="30" fill="black" stroke="black" font-size="35">TSPR</text>
-                </svg>
+                <img class="h-13 w-13 rounded-full" src="../assets/Photos/RealEstateLogo.jpg" alt="logo">
                 
             </router-link>
             
@@ -47,8 +45,8 @@
                         </li> -->
 
                         <li>
-                            <router-link class="text-white-500 transition hover:underline" to="/project">  
-                                {{ $t('projects') }}
+                            <router-link class="text-white-500 transition hover:underline" to="/properties">  
+                                {{ $t('property') }}
                             </router-link>
                         </li>
 
@@ -57,14 +55,16 @@
                                 {{ $t('setting') }}    
                             </router-link>
                         </li> -->
-                        <li>
-                            <router-link class="text-white-500 transition  hover:underline" to="/contact"> 
-                                {{ $t('Contact') }}    
-                            </router-link>
-                        </li>
+                      
                         <li>
                             <router-link class="text-white-500 transition  hover:underline" to="/branding"> 
                                 {{ $t('branding') }}    
+                            </router-link>
+                        </li>
+
+                          <li>
+                            <router-link class="text-white-500 transition  hover:underline" to="/contact"> 
+                                {{ $t('Contact') }}    
                             </router-link>
                         </li>
                     </ul>

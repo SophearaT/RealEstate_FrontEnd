@@ -12,7 +12,7 @@ import Setting from './pages/Setting.vue'
 import Collection from './components/Collection.vue'
 import Pricing from './components/Pricing.vue'
 import PricingList from './components/PricingList.vue'
-import Project from './pages/Project.vue'
+import Properties from './pages/Properties.vue'
 import ProjectPage from './pages/ProjectPage.vue'
 //import Registration from './pages/Registration.vue'
 import User from './pages/User.vue'
@@ -29,6 +29,7 @@ import HeaderSide from './components/HeaderSide.vue'
 import LoginForm from './pages/LoginForm.vue'
 import SignUp from './pages/SignUp.vue'
 import UserCRUD from './pages/UserCRUD.vue'
+import PropertyDetail from './pages/PropertyDetail.vue'
 import DashboardContent from './components/DashboardContent.vue'
 
 
@@ -43,7 +44,8 @@ const routes = [
     { path: 'pricing', component: PricingList}
   ]
   },
-  { path: '/project', component: Project},
+  { path: '/properties', component: Properties},
+  { path: '/propertydetail', component: PropertyDetail },
   { path: '/project/:name', component: ProjectPage},
   { path: '/login', component: LoginForm},
   { path: '/signup', component: SignUp},
@@ -87,6 +89,7 @@ const i18n = createI18n({
             user: 'User',
             services: 'Services',
             projects: 'Projects',
+            property: 'Property',
             setting: 'Setting',
             Contact: 'Contact'
         },
@@ -98,6 +101,7 @@ const i18n = createI18n({
             user: 'អ្នកប្រើប្រាស់',
             services: 'សេវាកម្ម',
             projects: 'គម្រោង',
+            property: 'អចលនទ្រព្យ',
             setting: 'ការកំណត់',
             Contact: 'ទំនាក់ទំនង'
         }
