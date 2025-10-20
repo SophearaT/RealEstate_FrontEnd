@@ -30,6 +30,7 @@ import LoginForm from './pages/LoginForm.vue'
 import SignUp from './pages/SignUp.vue'
 import UserCRUD from './pages/UserCRUD.vue'
 import PropertyDetail from './pages/PropertyDetail.vue'
+import DashboardContent from './components/DashboardContent.vue'
 
 
 const routes = [
@@ -53,7 +54,8 @@ const routes = [
   { path: '/contact', component: ContactForm},
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
   { path: '/dashboard', component: MainDashboard, meta: { requiresAuth: true }, children:[
-          { path: '', name:'dashboard' ,component: UserDashboardContent},
+          { path: '', name:'dashboard' ,component: DashboardContent},
+          { path: 'user',name:'user', component: UserDashboardContent},
           { path: 'property',name:'property', component: PropertyDashboardContent},
     
   ] },
