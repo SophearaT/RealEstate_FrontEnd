@@ -1,4 +1,22 @@
 <template>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="place-self-center pt-8 px-8">
+            <h1 class="font-bold md:text-2xl dark:text-white text-center mb-4">
+                About Our System</h1>
+            <p class="indent-10 md:text-lg lg:text-xl dark:text-white">
+                Established in 2025, our system is the leading real estate platform in Cambodia. From our offices in
+                Phnom Penh, we assist property seekers to find, inquire and secure properties for sale and rent. The
+                website lists many properties for sale and rent across Cambodia.
+            </p>
+        </div>
+        <div class="lg:mt-8 lg:flex place-self-center py-8 px-8">
+            <img src="../assets/Photos/idg.jpg" alt="photo of our team" class="rounded-lg">
+        </div>
+    </section>
+
+
+
+
 <section class="bg-white dark:bg-gray-900">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7">
